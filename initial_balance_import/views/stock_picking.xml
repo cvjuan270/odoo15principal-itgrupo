@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_picking_form" model="ir.ui.view">
+           <field name="name">stock.picking</field>
+           <field name="model">stock.picking</field>
+           <field name="inherit_id" ref="stock.view_picking_form"/>
+           <field name="arch" type="xml">
+               <xpath expr="//field[@name='move_ids_without_package']" position="before">
+                    <group string="Importar Lotes" attrs="{'invisible':[('state','in',['done','cancel'])]}" groups="initial_balance_import.initial_balance_import_group">
+                        <group>
+                            <field name="remove_rest" invisible="1"/>
+                            <button name="get_read_lotes" string="Importar Lineas" class="oe_highlight" type="object" />
+                            <button name="download_lot_import_template" string="Descargar plantilla" class="oe_highlight" type="object" />
+
+                            <field name="errores_txt" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="lotes_file"/>
+                            <field name="tipo_import_lot"/>
+                        </group>
+                    </group>    
+               </xpath>
+           </field>
+    </record>
+</odoo>

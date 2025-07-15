@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record id="initial_balance_template" model="ir.attachment">
+            <field name="name">initial_balance_template.xlsx</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="initial_balance_import/static/xlsx/template.xlsx"/>
+        </record>
+</odoo>
