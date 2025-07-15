@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="stock_picking_type_view_form_inherit" model="ir.ui.view">
-        <field name="name">stock.picking.type.view.form.inherit</field>
-        <field name="model">stock.picking.type</field>
-        <field name="inherit_id" ref="stock.view_picking_type_form"/>
+    <record id="type_operation_kardex_view_form_inherit" model="ir.ui.view">
+        <field name="name">type.operation.kardex.view.form.inherit</field>
+        <field name="model">type.operation.kardex</field>
+        <field name="inherit_id" ref="kardex_fisico_it.view_type_operation_kardex_form"/>
         <field name="arch" type="xml">
 
             <xpath expr="//sheet" position="inside">
@@ -12,7 +12,6 @@
                     <page name="reports" string="Reportes">
                         <group name="uniform_delivery" string="Entrega Uniformes/EPPs">
                             <field name="uniform_delivery_report" />
-                            <label for="uniform_delivery_content" string="Texto a Mostrar"/>
                             <field name="uniform_delivery_content" nolabel="1" colspan="2" attrs="{'invisible':[('uniform_delivery_report','=',False)]}"/>
                         </group>
                     </page>

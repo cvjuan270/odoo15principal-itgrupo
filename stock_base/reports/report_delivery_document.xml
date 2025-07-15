@@ -76,7 +76,7 @@
                     </tbody>
                 </table>
             </div>
-            <div t-if="o.picking_type_id.uniform_delivery_report">
+            <div t-if="o.type_operation_sunat_id.uniform_delivery_report">
 
                 <t t-set="employee_dnis" t-value="o.move_ids_without_package.mapped('employee_dni')"/>
                 <t t-set="employee" t-value="env['hr.employee'].search([('identification_id','=',employee_dnis[0])],limit=1)" t-if="employee_dnis"/>
@@ -106,7 +106,7 @@
                     </strong>
                     <t t-esc="employee.job_title" t-if="employee"/>
                 </div>
-                <t t-raw="o.picking_type_id.uniform_delivery_content"/>
+                <t t-raw="o.type_operation_sunat_id.uniform_delivery_content"/>
                 <table style="width: 100%; border:none;">
                     <tr>
                         <td style="width: 60%; vertical-align: middle; border:none; font-size:10px !important;">

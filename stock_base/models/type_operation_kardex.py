@@ -1,8 +1,8 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
-class StockPickingType(models.Model):
-    _inherit = 'stock.picking.type'
+class TypeOperationKardex(models.Model):
+    _inherit = 'type.operation.kardex'
     
     uniform_delivery_report = fields.Boolean('Habilitar Reporte de Uniformes')
     uniform_delivery_content = fields.Html(
